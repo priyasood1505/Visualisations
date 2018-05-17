@@ -13,16 +13,17 @@
   <div class="container" style="min-width: 550px; height: 550px; margin: 0 auto">
     <canvas id="myChart"></canvas>
   </div>
-  <input type="radio" name="mychart" class="mychart" id= "AC1" value="AC1" onclick= "chartfunc()" checked>AC1 <br/>
-  <input type="radio" name="mychart" class="mychart" id= "AC2" value="AC2" onclick= "chartfunc()">AC2 <br/>
-  <input type="radio" name="mychart" class="mychart" id= "AC3" value="AC3" onclick= "chartfunc()">AC3 <br/>
-  <input type="radio" name="mychart" class="mychart" id= "AC4" value="AC4" onclick= "chartfunc()">AC4 <br/>
-  <input type="radio" name="mychart" class="mychart" id= "AC5" value="AC5" onclick= "chartfunc()">AC5 <br/>
+  <input type="radio" name="mychart" class="mychart" id= "AC1" value="AC1" onclick= "chartfunc()" checked>AC1
+  <input type="radio" name="mychart" class="mychart" id= "AC2" value="AC2" onclick= "chartfunc()">AC2 
+  <input type="radio" name="mychart" class="mychart" id= "AC3" value="AC3" onclick= "chartfunc()">AC3 
+  <input type="radio" name="mychart" class="mychart" id= "AC4" value="AC4" onclick= "chartfunc()">AC4
+  <input type="radio" name="mychart" class="mychart" id= "AC5" value="AC5" onclick= "chartfunc()">AC5 
 
 
   <script>
     let myChart = document.getElementById('myChart').getContext('2d');
-
+    axisX:{
+  title:"Timestamp"}
     // Global Options
     Chart.defaults.global.defaultFontFamily = 'Raleway';
     Chart.defaults.global.defaultFontSize = 18;
@@ -31,19 +32,22 @@
     let ACChart = new Chart(myChart, {
       type:'bar', // bar, horizontalBar, pie, line, doughnut, radar, polarArea
       data:{
-        labels:['12:00', '12:30', '13:00', '13:30', '14:00', '14:30'],
+        labels:['12:00', '12:30', '13:00', '13:30', '14:00', '14:30','15:00','15:30'],
         datasets:[{
           label:'ACData1',
           data:[
             0,
-            1,
+            0,
             1,
             0,
             1,
-            0
+            0,
+            1,
+            1
+        
           ],
           //backgroundColor:'green',
-          backgroundColor:[
+          /*backgroundColor:[
             'rgba(255, 99, 132, 0.6)',
             'rgba(54, 162, 235, 0.6)',
             'rgba(255, 206, 86, 0.6)',
@@ -51,7 +55,7 @@
             'rgba(153, 102, 255, 0.6)',
             'rgba(255, 159, 64, 0.6)',
             'rgba(255, 99, 132, 0.6)'
-          ],
+          ],*/
           borderWidth:1,
           borderColor:'#777',
           hoverBorderWidth:3,
