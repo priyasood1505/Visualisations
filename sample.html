@@ -1,0 +1,59 @@
+<!DOCTYPE HTML>
+<html>
+<head>  
+<script>
+window.onload = function () {
+
+var chart = new CanvasJS.Chart("chartContainer", {
+	animationEnabled: true,
+	exportEnabled: true,
+	title:{
+		text: "AC Data Monitoring"
+	},
+	axisY:{ 
+		title: "Power -->",
+        interval: 1,
+         		//includeZero: false, 
+		},
+    axisX:{ 
+		title: "Timestamp -->",
+		//includeZero: false, 
+		},
+	data: [{
+		type: "stepLine",
+		//markerSize: 5,
+		dataPoints: [
+			{ y: 0, label: "11:00 AM" },
+			{ y: 0, label: "11:30 AM" },
+			{ y: 1, label: "12:00 PM" },
+          { y: 0, label: "12:30 PM" },
+          { y: 1, label: "13:00 PM" },
+          { y: 1, label: "13:30 PM" },
+          { y: 0, label: "14:00 PM" },
+          { y: 1, label: "14:30 PM" },
+          { y: 0, label: "15:00 PM" },
+          { y: 1, label: "15:30 PM" },
+          { y: 0, label: "16:00 PM" },
+          { y: 0, label: "16:30 PM" },
+          { y: 0, label: "17:00 PM" },
+          { y: 1, label: "17:30 PM" },
+          { y: 1, label: "18:00 PM" },
+          { y: 0, label: "18:30 PM" },
+          { y: 0, label: "19:00 PM" },
+          { y: 1, label: "19:30 PM" },
+          { y: 1, label: "20:00 PM" },
+          { y: 0, label: "20:30 PM" },
+			
+		]
+	}]
+});
+chart.render();
+
+}
+</script>
+</head>
+<body>
+<div id="chartContainer" style="height: 300px; width: 100%;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+</body>
+</html>
